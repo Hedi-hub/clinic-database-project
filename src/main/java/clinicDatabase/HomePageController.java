@@ -8,6 +8,8 @@ import org.springframework.web.context.annotation.RequestScope;
 public class HomePageController {
 
    @RequestMapping(value = {"/", "/index", "/home" })
+   //request comes before the method!
+
     public String showHomePage(){
         return "index";
     }
