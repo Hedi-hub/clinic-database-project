@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+<head th:replace="fragments/header :: head">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600;700&display=swap" rel="stylesheet">
+    <title>Medical Database System</title>
+</head>
+<body>
+
+<div class="main">
+    <div class="info-wrap">
+        <div class="info-column">
+            <div class="info-headLine">Who are we?</div>
+            <img th:src="@{images/doctor.png}">
+            <div class="info-text">We are a company that provides you with medical assistance all over the world. Your
+                health is just one click away!
+            </div>
+        </div>
+
+        <div class="info-column">
+            <div class="info-headLine">Who we help?</div>
+            <img th:src="@{images/doctor.png}">
+            <div class="info-text">We are aimed to help patients from accross the globe find the perfect medical treatment for themselves and
+                their loved ones!
+            </div>
+        </div>
+
+        <div class="info-column">
+            <div class="info-headLine">How to apply?</div>
+            <img th:src="@{images/health-report.png}">
+            <div class="info-text">Please fill in the medical form that will help our doctors plan the perfect treatment plan for you.
+                We contact our patients within 24 hours!
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

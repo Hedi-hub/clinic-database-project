@@ -21,7 +21,7 @@ header{
 }
 
 .logo-wrap h3{
-    font-family: 'Josefin Sans', sans-serif;
+    font-family: 'Open Sans', sans-serif;
 }
 
 nav{
@@ -29,13 +29,12 @@ nav{
 }
 
 nav a{
-    font-family: 'Josefin Sans', sans-serif;
-    font-size: 20px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 15px;
     margin-right: 30px;
     /* it removes the under lines*/
     text-decoration: none;
     color: #808080;
-
 }
 
 nav a:hover{
