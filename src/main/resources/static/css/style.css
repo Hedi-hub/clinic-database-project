@@ -41,6 +41,18 @@ nav a:hover{
     color: #000;
 }
 
+.info-wrap{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-top: 5%;
+}
+
+.info-column{
+    width: 33%;
+    text-align: center;
+}
+
 
 
 
