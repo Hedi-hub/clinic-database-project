@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+<head th:replace="fragments/header :: head">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600;700&display=swap" rel="stylesheet">
+    <title>Medical Database System</title>
+</head>
+<body>
+<header>
+    <div class="logo-wrap">
+        <img th:src="@{images/consulting.png}">
+        <h3>MediCarePlanner</h3>
+    </div>
+    <nav>
+        <!in href you must put the request info to redirect>
+        <a th:href="@{/about}">ABOUT US</a>
+        <a href="#">SUBMIT FORM</a>
+        <a href="#">CONTACT US</a>
+    </nav>
+</header>
+
+<div class="main">
+    <div class="container">
+        <form id="contact" action="" method="post">
+            <h3>Patient Form</h3>
+            <h4>Fill this form in and make sure to mention all the details</h4>
+            <fieldset>
+                <input placeholder="Your name" type="text" tabindex="1" required autofocus>
+            </fieldset>
+            <fieldset>
+                <input placeholder="Your Email Address" type="email" tabindex="2" required>
+            </fieldset>
+            <fieldset>
+                <input placeholder="The diagnosis you'd like to get treatment for" type="email" tabindex="2" required>
+            </fieldset>
+            <fieldset>
+                <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Submit</button>
+            </fieldset>
+        </form>
+    </div>
+</div>
+
+
+</body>
+</html>
