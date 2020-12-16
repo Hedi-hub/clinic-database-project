@@ -14,15 +14,13 @@ public class Doctor {
     private ArrayList<String> specialty;
 
     public Doctor(){}
-
+    /*No Id in our constructor*/
     public Doctor(String name) {
         this.name = name;
         this.specialty = new ArrayList<>();
     }
 
-    public int getId() {
-        return id;
-    }
+    public int getId() { return id; }
 
     public String getName() {
         return name;

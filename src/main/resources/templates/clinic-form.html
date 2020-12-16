@@ -21,17 +21,23 @@
 
 <div class="main">
     <div class="container">
-        <form id="contact" action="" method="post">
+        <form id="contact" th:action="@{/acceptPatientForm}" method="post">
             <h3>Patient Form</h3>
             <h4>Fill this form in and make sure to mention all the details</h4>
             <fieldset>
-                <input placeholder="Your name" type="text" tabindex="1" required autofocus>
+                <input placeholder="First name" name="first-name" type="text" tabindex="1" required autofocus>
+            </fieldset>
+            <fieldset>
+                <input placeholder="Last name" name="last-name" type="text" tabindex="1" required autofocus>
             </fieldset>
             <fieldset>
                 <input placeholder="Your Email Address" type="email" tabindex="2" required>
             </fieldset>
             <fieldset>
                 <input placeholder="The diagnosis you'd like to get treatment for" type="email" tabindex="2" required>
+            </fieldset>
+            <fieldset>
+                <input placeholder="Your Country" type="text    " tabindex="2" required>
             </fieldset>
             <fieldset>
                 <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Submit</button>

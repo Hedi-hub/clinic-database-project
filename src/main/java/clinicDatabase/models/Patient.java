@@ -1,30 +1,27 @@
 package clinicDatabase.models;
 
-import org.hibernate.annotations.GeneratorType;
-
 import javax.persistence.*;
 import java.util.Objects;
 
 @Entity
-@Table(name="users")
-public class User {
+@Table(name="patients")
+public class Patient {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
 
-    @Column(name="first-name")
+    @Column(name="first_name")
     private String firstName;
-    @Column(name="last-name")
+    @Column(name="last_name")
     private String lastName;
     @Column(name="email")
     private String email;
     @Column(name="country")
     private String country;
 
-    public User(){}
-    public User(int id, String firstName, String lastName, String email, String country) {
-        this.id = id;
+    public Patient(){}
+    public Patient(String firstName, String lastName, String email, String country) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
@@ -75,7 +72,7 @@ public class User {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        User user = (User) o;
+        Patient user = (Patient) o;
         return id == user.id &&
                 Objects.equals(firstName, user.firstName) &&
                 Objects.equals(lastName, user.lastName) &&
