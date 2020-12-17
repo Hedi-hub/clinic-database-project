@@ -1,5 +1,6 @@
 package clinicDatabase.controllers;
 
+import clinicDatabase.models.Patient;
 import clinicDatabase.services.PatientService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -20,7 +21,7 @@ public class PatientFormController {
         }
 
         @RequestMapping("/acceptPatientForm")
-    public String acceptPatientRequest(@RequestParam("first-name") String firstName,
+        public String acceptPatientRequest(@RequestParam("first-name") String firstName,
                                        @RequestParam("last-name") String lastName,
                                        @RequestParam("email") String email,
                                        @RequestParam("country") String country,
@@ -29,6 +30,17 @@ public class PatientFormController {
             //if no-add and then show the options
             //if yes- show them the treatment options
             //* show treatment options on a new pag
+
+            Patient patient = patientService.getPatientByEmail(email);
+            if (patient == null){
+                //doesn't exist
+                Patient patientToCreate = new Patient(firstName, lastName, email, country);
+                patientService.savePatient(patientToCreate);
+            }
+
+            // code here to search for all treatment options and doctors
+
+            return "index";// we add later
 
 
         }

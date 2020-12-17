@@ -20,17 +20,19 @@ public class PatientService {
             patientRepository.save(patient);// this line does the "insert" elements behind the scene
         }
 
+     public Patient getPatientByEmail(String email){
+        return patientRepository.findPatientByEmail(email);
+     }
+
     public Patient getPatientById(Integer id){
         return patientRepository.findById(id).get();
     }
-
-
 
     public List<Patient>  getAllPatients(){
         return (List) patientRepository.findAll();
     }
 
-     public void removePatient(Patient patientToRemove){
+    public void removePatient(Patient patientToRemove){
         patientRepository.delete(patientToRemove);
      }
 

@@ -11,13 +11,15 @@ public class Doctor {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
     private String name;
-    private ArrayList<String> specialty;
+    private String specialty;
+    private String clinicName;
 
     public Doctor(){}
     /*No Id in our constructor*/
-    public Doctor(String name) {
+    public Doctor(String name, String specialty,  String clinicName) {
         this.name = name;
-        this.specialty = new ArrayList<>();
+        this.specialty = specialty;
+        this.clinicName = clinicName;
     }
 
     public int getId() { return id; }
@@ -30,11 +32,11 @@ public class Doctor {
         this.name = name;
     }
 
-    public ArrayList<String> getSpecialty() {
+    public String getSpecialty() {
         return specialty;
     }
 
-    public void setSpecialty(ArrayList<String> specialty) {
+    public void setSpecialty(String specialty) {
         this.specialty = specialty;
     }
 }
