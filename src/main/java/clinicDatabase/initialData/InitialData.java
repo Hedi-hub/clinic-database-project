@@ -27,11 +27,17 @@ public class InitialData {
         patientService.savePatient(patient1);
         patientService.savePatient(patient2);
 
-        Doctor doctor1 = new Doctor("Paul Ekman", "Dentist", "MedSup");
-        Doctor doctor2 = new Doctor("Hedieh Shafaee", "Surgery", "Clinic#1");
+        Doctor doctor1 = new Doctor("Paul Ekman", "Dentist", "SmileStudio");
+        Doctor doctor2 = new Doctor("Hedieh Shafaee", "Surgery", "Charite");
+        Doctor doctor3 = new Doctor("Tom Hanks", "oncologist", "MeoKlinik");
+        Doctor doctor4 = new Doctor("Anna Karnina", "Cardiologist", "Charite");
+        Doctor doctor5 = new Doctor("Peter Wein", "Dentist", "SmileStudio");
 
         doctorService.saveDoctor(doctor1);
         doctorService.saveDoctor(doctor2);
+        doctorService.saveDoctor(doctor3);
+        doctorService.saveDoctor(doctor4);
+        doctorService.saveDoctor(doctor5);
 
 
     }

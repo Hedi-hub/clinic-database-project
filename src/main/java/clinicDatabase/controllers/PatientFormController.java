@@ -1,6 +1,9 @@
 package clinicDatabase.controllers;
 
+import clinicDatabase.models.Doctor;
 import clinicDatabase.models.Patient;
+import clinicDatabase.services.DoctorPatientMatcher;
+import clinicDatabase.services.DoctorService;
 import clinicDatabase.services.PatientService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -8,11 +11,16 @@ import org.springframework.stereotype.Repository;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import java.util.ArrayList;
+
 @Controller
 public class PatientFormController {
 
         @Autowired
         PatientService patientService;
+
+        @Autowired
+        DoctorService doctorService;
 
         @RequestMapping("/showPatientForm")
         public String showClinicForm(){
@@ -37,6 +45,10 @@ public class PatientFormController {
                 Patient patientToCreate = new Patient(firstName, lastName, email, country);
                 patientService.savePatient(patientToCreate);
             }
+
+            ArrayList<Doctor> doctors = (ArrayList) doctorService.getAllDoctor();
+            DoctorPatientMatcher doctorPatientMatcher = new DoctorPatientMatcher();
+            doctors = doctorPatientMatcher.getDoctorByKeyword(doctors, diagnosis);
 
             // code here to search for all treatment options and doctors
 
