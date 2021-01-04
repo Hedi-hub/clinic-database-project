@@ -13,13 +13,15 @@ public class Doctor {
     private String name;
     private String specialty;
     private String clinicName;
+    private String imageURL;
 
     public Doctor(){}
     /*No Id in our constructor*/
-    public Doctor(String name, String specialty,  String clinicName) {
+    public Doctor(String name, String specialty,  String clinicName, String imageURL) {
         this.name = name;
         this.specialty = specialty;
         this.clinicName = clinicName;
+        this.imageURL = imageURL;
     }
 
     public int getId() { return id; }
@@ -38,5 +40,13 @@ public class Doctor {
 
     public void setSpecialty(String specialty) {
         this.specialty = specialty;
+    }
+
+    public String getImageURL() {
+        return imageURL;
+    }
+
+    public void setImageURL(String imageURL) {
+        this.imageURL = imageURL;
     }
 }

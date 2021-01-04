@@ -7,23 +7,45 @@
     <title>Medical Database System</title>
 </head>
 <body>
-    <header>
-        <div class="logo-wrap">
-            <img th:src="@{images/consulting.png}">
-            <h3>MediCarePlanner</h3>
-        </div>
-        <nav>
-            <!in href you must put the request info to redirect>
-            <a th:href="@{/about}">ABOUT US</a>
-            <a th:href="@{/showPatientForm}">SUBMIT FORM</a>
-            <a href="#">CONTACT US</a>
-        </nav>
-    </header>
-    <div class="container">
-
+<header>
+    <div class="logo-wrap">
+        <img th:src="@{images/consulting.png}">
+        <h3>MediCarePlanner</h3>
     </div>
-    <footer>
+    <nav>
+        <!in href you must put the request info to redirect>
+        <a th:href="@{/about}">ABOUT US</a>
+        <a th:href="@{/showPatientForm}">SUBMIT FORM</a>
+        <a href="#">CONTACT US</a>
+    </nav>
+</header>
+<div class="container">
+    <div class="doctor-wrap">
+        <form>
+            <div class="doctor-info">
+            <img class="doc-img" src="https://ygeia4u.gr/wp-content/uploads/2016/06/doctor-300x300.png">
+                <div>Name: Paul Ekman</div>
+                <div>Specialty: Dentist</div>
+                <div>Clinic: Smile Studio</div>
+                <input class="search-doc" type="submit" value="Send a message">
+            </div>
 
-    </footer>
+        </form>
+        <form>
+            <div class="doctor-info">
+            <img class="doc-img" src="https://www.seekpng.com/png/small/26-262828_ladydoctor-1024x1024-lady-doctor-image-png.png">
+                <div>Name: Anna Sadok</div>
+                <div>Specialty: Cardiologist</div>
+                <div>Clinic: Charite</div>
+                <input class="search-doc" type="submit" value="Send a message">
+            </div>
+
+        </form>
+    </div>
+
+</div>
+<footer>
+
+</footer>
 </body>
 </html>

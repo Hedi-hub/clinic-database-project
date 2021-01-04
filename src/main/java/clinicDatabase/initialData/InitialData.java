@@ -27,11 +27,11 @@ public class InitialData {
         patientService.savePatient(patient1);
         patientService.savePatient(patient2);
 
-        Doctor doctor1 = new Doctor("Paul Ekman", "Dentist", "SmileStudio");
-        Doctor doctor2 = new Doctor("Hedieh Shafaee", "Surgery", "Charite");
-        Doctor doctor3 = new Doctor("Tom Hanks", "oncologist", "MeoKlinik");
-        Doctor doctor4 = new Doctor("Anna Karnina", "Cardiologist", "Charite");
-        Doctor doctor5 = new Doctor("Peter Wein", "Dentist", "SmileStudio");
+        Doctor doctor1 = new Doctor("Paul Ekman", "Dentist", "SmileStudio", "https://ygeia4u.gr/wp-content/uploads/2016/06/doctor-300x300.png");
+        Doctor doctor2 = new Doctor("Hedieh Shafaee", "Surgery", "Charite", "https://ygeia4u.gr/wp-content/uploads/2016/06/doctor-300x300.png");
+        Doctor doctor3 = new Doctor("Tom Hanks", "oncologist", "MeoKlinik","https://ygeia4u.gr/wp-content/uploads/2016/06/doctor-300x300.png");
+        Doctor doctor4 = new Doctor("Anna Sadok", "Cardiologist", "Charite","https://www.seekpng.com/png/small/26-262828_ladydoctor-1024x1024-lady-doctor-image-png.png");
+        Doctor doctor5 = new Doctor("Peter Wein", "Dentist", "SmileStudio","https://ygeia4u.gr/wp-content/uploads/2016/06/doctor-300x300.png");
 
         doctorService.saveDoctor(doctor1);
         doctorService.saveDoctor(doctor2);
