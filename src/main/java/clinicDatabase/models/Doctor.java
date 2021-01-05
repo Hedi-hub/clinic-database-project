@@ -42,6 +42,14 @@ public class Doctor {
         this.specialty = specialty;
     }
 
+    public String getClinicName() {
+        return clinicName;
+    }
+
+    public void setClinicName(String clinicName) {
+        this.clinicName = clinicName;
+    }
+
     public String getImageURL() {
         return imageURL;
     }
