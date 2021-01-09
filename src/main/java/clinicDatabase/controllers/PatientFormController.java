@@ -8,6 +8,7 @@ import clinicDatabase.services.PatientService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.stereotype.Repository;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
@@ -33,7 +34,8 @@ public class PatientFormController {
                                        @RequestParam("last-name") String lastName,
                                        @RequestParam("email") String email,
                                        @RequestParam("country") String country,
-                                       @RequestParam("diagnosis") String diagnosis){
+                                       @RequestParam("diagnosis") String diagnosis,
+                                           Model model){
             //check if already exists?
             //if no-add and then show the options
             //if yes- show them the treatment options
@@ -51,8 +53,11 @@ public class PatientFormController {
             doctors = doctorPatientMatcher.getDoctorByKeyword(doctors, diagnosis);
 
             // code here to search for all treatment options and doctors
+            model.addAttribute("allDoctors", doctors);
 
-            return "index";// we add later
+            //using the REDIRECT:/index would redirect to homepagecontroller
+            // which you would get all doctors
+            return "/index";// we add later
 
 
         }

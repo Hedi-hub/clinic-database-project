@@ -89,13 +89,12 @@ body {
 
 /* DOCTORS INFO. */
 .doctor-wrap-row{
-    width: 80%;
-    margin: 0 auto;
+    /*width: 80%;*/
+    margin: 30px;
     position: relative;
-    background-color: #e3ffff;
-    display: flex;
+    display: inline-flex;
     flex-direction: row;
-    flex-flow: row wrap;
+
     justify-content: space-evenly;
     align-content: space-between;
 
@@ -107,14 +106,22 @@ body {
     border: 1px solid #000000;
     border-radius: 8px 8px 8px 8px;
     padding:20px 50px;
+    display: inline-block;
+    margin-right:10% ;
+}
+
+/*.doctor-info:nth-child(4n - 1) {
+    break-after:auto !important; /* New syntax
+}*/
+
+
+.doctor-info:nth-child(3n)::after {
+    content: "";
+    display: block;
 
 }
 
-.doctor-info:nth-child(4n - 1) {
-    page-break-after: always; /* CSS 2.1 syntax */
-    break-after:auto; /* New syntax */
-}
-.break{
+.break-line{
     width: 100%;
 }
 

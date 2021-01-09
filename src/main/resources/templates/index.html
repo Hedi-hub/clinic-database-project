@@ -20,9 +20,9 @@
     </nav>
 </header>
 <div class="container">
-    <div th:each="doctor: ${allDoctors}" class="doctor-wrap-row">
+    <div  class="doctor-wrap-row">
         <form>
-            <div class="doctor-info">
+            <div th:each="doctor: ${allDoctors}" class="doctor-info">
                 <!-- THE THYMLEAF FOR FORLOOP COME WITH $SIGN AND THE EXACT
                  NAME OF OBJECT AND VARIABLE-->
             <img th:src="${doctor.imageURL}" class="doc-img">
@@ -30,7 +30,7 @@
                 <div th:text="${doctor.specialty}">Specialty: Dentist</div>
                 <div th:text="${doctor.clinicName}">Clinic: Smile Studio</div>
                 <input class="search-doc" type="submit" value="Send a message">
-                <div class="break"></div>
+                <div class="break-line"></div>
             </div>
         </form>
     </div>
