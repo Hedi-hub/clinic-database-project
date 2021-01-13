@@ -6,22 +6,25 @@ body{
 header{
     width: 100%;
     padding: 10px 100px;
-    background-color: #e6fff2;
+    background-color: #B0E4FB;
     display: flex;
     flex-direction: row;
 }
 
 .logo-wrap{
-    display: flex;
-    flex-direction: row;
+
 }
 
 .logo-wrap img{
     width: 80px;
+    height: 80px;
+    margin-left: 30px;
 }
 
 .logo-wrap h3{
     font-family: 'Open Sans', sans-serif;
+    font-size:20px ;
+    font-weight: normal;
 }
 
 nav{
@@ -119,10 +122,6 @@ body {
     content: "";
     display: block;
 
-}
-
-.break-line{
-    width: 100%;
 }
 
 
