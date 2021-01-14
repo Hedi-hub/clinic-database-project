@@ -4,6 +4,10 @@
 <head th:replace="fragments/header :: head">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
     <title>Medical Database System</title>
 </head>
 <body>
@@ -20,6 +24,10 @@
     </nav>
 </header>
 <div class="container">
+    <div class="heading-tag">
+        <h2 id="tag1">MEDICARE PLANNER</h2>
+        <h4 id="tag2">FIND THE RIGHT DOCTOR FOR YOUR NEED</h4>
+    </div>
     <div  class="doctor-wrap-row">
         <form>
             <div th:each="doctor: ${allDoctors}" class="doctor-info">
@@ -27,10 +35,14 @@
                 <!-- THE THYMLEAF FOR FORLOOP COME WITH $SIGN AND THE EXACT
                  NAME OF OBJECT AND VARIABLE-->
             <img th:src="${doctor.imageURL}" class="doc-img">
-                <div th:text="${doctor.name}">Name: Paul Ekman</div>
-                <div th:text="${doctor.specialty}">Specialty: Dentist</div>
-                <div th:text="${doctor.clinicName}">Clinic: Smile Studio</div>
-                <input class="search-doc" type="submit" value="Send a message">
+                <br>
+                <span th:text="${doctor.name}" class="doc-name"></span>
+                <br>
+                <span th:text="${'Specialty: '+ doctor.specialty}" class="doc-specialty"></span>
+                <br>
+                <span th:text="${'Clinic: '+ doctor.clinicName}" class="doc-clinic"></span>
+                <br>
+                <input class="search-doc" type="submit" value="Contact">
 
             </div>
         </form>
