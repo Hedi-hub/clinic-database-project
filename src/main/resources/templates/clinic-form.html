@@ -3,9 +3,6 @@
 <head th:replace="fragments/header :: head">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600;700&display=swap" rel="stylesheet">
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <link rel="manifest" href="/site.webmanifest">
     <title>Medical Database System</title>
 </head>
@@ -18,7 +15,7 @@
     <nav>
         <!in href you must put the request info to redirect>
         <a th:href="@{/about}">ABOUT US</a>
-        <a href="#">SUBMIT FORM</a>
+        <a href="#">SEARCH DOCTOR</a>
         <a href="#">CONTACT US</a>
     </nav>
 </header>
@@ -26,7 +23,7 @@
 <div class="main">
     <div class="container">
         <form id="contact" th:action="@{/acceptPatientForm}" method="post">
-            <h3>Patient Form</h3>
+            <h3>Search Your Doctor</h3>
             <h4>Fill this form in and make sure to mention all the details</h4>
             <fieldset>
                 <input placeholder="First name" name="first-name" type="text" tabindex="1" required autofocus>
@@ -41,7 +38,7 @@
                 <input placeholder="The diagnosis you'd like to get treatment for" name="diagnosis" type="text" tabindex="2" required>
             </fieldset>
             <fieldset>
-                <input placeholder="Your Country" name="country" type="text    " tabindex="2" required>
+                <input placeholder="Your Country" name="country" type="text" tabindex="2" required>
             </fieldset>
             <fieldset>
                 <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Submit</button>

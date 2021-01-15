@@ -49,6 +49,11 @@ nav a:hover{
     color: #000;
 }
 
+/*ABOUT US PAGE*/
+.main{
+    display: flex;
+    flex-direction: row;
+}
 .info-wrap{
     display: flex;
     flex-direction: row;
@@ -96,7 +101,10 @@ body {
     margin: 20px auto;
     padding: 100px;
     text-align: center;
-    background-color:#D1E7F1  ;
+    /*THE .. BRING YOU OUT OF THE CSS TO REACH THE IMAGES*/
+    background-image: url("../images/header-tag-img.jpg");
+    /*TO FIT OUR IMG. INTO OUR CONTAINER*/
+    background-size: contain;
 }
 #tag1{
     font-size: 30px;
@@ -140,14 +148,9 @@ body {
 .doctor-info:nth-child(3n)::after {
     content: "";
     display: block;
-
 }
-
-
 .doc-img{
     width: 150px;
-
-
 }
 /*WITH THIS CODE IN SEARCH BUTTON YOU FIRST GET RID
 OF THE DEFAULT DESIGN IN ORDER TO GIVE IT A NEW DESIGN*/
@@ -179,7 +182,7 @@ OF THE DEFAULT DESIGN IN ORDER TO GIVE IT A NEW DESIGN*/
     font-size: larger;
 }
 
-
+/*SUBMIT FORM*/
 #contact input[type="text"],
 #contact input[type="email"],
 #contact input[type="tel"],
@@ -192,7 +195,8 @@ OF THE DEFAULT DESIGN IN ORDER TO GIVE IT A NEW DESIGN*/
 #contact {
     background: #F9F9F9;
     padding: 25px;
-    margin: 150px 0;
+    margin: 150px auto;
+    width: 60%;
     box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
 }
 
@@ -251,15 +255,15 @@ fieldset {
     cursor: pointer;
     width: 100%;
     border: none;
-    background: #4CAF50;
-    color: #FFF;
+    background:#B0E4FB;
+    color: #000000;
     margin: 0 0 5px;
     padding: 10px;
     font-size: 15px;
 }
 
 #contact button[type="submit"]:hover {
-    background: #43A047;
+    background: #93dff6;
     -webkit-transition: background 0.3s ease-in-out;
     -moz-transition: background 0.3s ease-in-out;
     transition: background-color 0.3s ease-in-out;
