@@ -22,30 +22,39 @@
 
 <div class="main">
     <div class="info-wrap">
-        <div class="info-column">
-            <div class="info-headLine">Who are we?</div>
+        <div class="about-column">
+            <span class="about-headLine">Who are we?</span>
+            <br>
             <img th:src="@{images/doctor.png}">
-            <div class="info-text">We are a company that provides you with medical assistance all over the world. Your
+            <br>
+            <span class="about-text">We are a company that provides you with medical assistance all over the world. Your
                 health is just one click away!
-            </div>
+            </span>
         </div>
 
-        <div class="info-column">
-            <div class="info-headLine">Who we help?</div>
+        <div class="about-column">
+            <span class="about-headLine">Who we help?</span>
+            <br>
             <img th:src="@{images/clinic.png}">
-            <div class="info-text">We are aimed to help patients from accross the globe find the perfect medical treatment for themselves and
+            <br>
+            <span class="about-text">We are aimed to help patients from accross the globe find the perfect medical treatment for themselves and
                 their loved ones!
-            </div>
+            </span>
         </div>
 
-        <div class="info-column">
-            <div class="info-headLine">How to apply?</div>
+        <div class="about-column">
+            <span class="about-headLine">How to apply?</span>
+            <br>
             <img th:src="@{images/health-report.png}">
-            <div class="info-text">Please fill in the medical form that will help our doctors plan the perfect treatment plan for you.
+            <br>
+            <span class="about-text">Please fill in the medical form that will help our doctors plan the perfect treatment plan for you.
                 We contact our patients within 24 hours!
-            </div>
+            </span>
         </div>
     </div>
 </div>
+<footer th:replace="fragments/footer :: footer">
+
+</footer>
 </body>
 </html>

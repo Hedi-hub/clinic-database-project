@@ -26,7 +26,7 @@
         <h4 id="tag2">FIND THE RIGHT DOCTOR FOR YOUR NEED</h4>
     </div>
     <div  class="doctor-wrap-row">
-        <form>
+        <form th:action="@{/showDoctorInquiry}">
             <div th:each="doctor: ${allDoctors}" class="doctor-info">
 
                 <!-- THE THYMLEAF FOR FORLOOP COME WITH $SIGN AND THE EXACT
@@ -39,6 +39,9 @@
                 <br>
                 <span th:text="${'Clinic: '+ doctor.clinicName}" class="doc-clinic"></span>
                 <br>
+
+                <!--IT HIDES THE NAME FROM THE VIEW BUT IT WILL TRANSFER TO CONTROLLER -->
+                <input type="hidden" name="doctor-name" th:value="${doctor.name}">
                 <input class="search-doc" type="submit" value="Contact">
 
             </div>
@@ -46,7 +49,7 @@
     </div>
 
 </div>
-<footer>
+<footer th:replace="fragments/footer :: footer">
 
 </footer>
 </body>
