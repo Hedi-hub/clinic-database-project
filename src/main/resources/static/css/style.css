@@ -338,6 +338,32 @@ fieldset {
 
 /* END FORM*/
 
+/* start DOCTOR INQUIRY*/
+.doc-inquiry-main{
+    width: 90%;
+    margin: 0 auto;
+    position: relative;
+    background-color: #FFFFFF;
+    display: flex;
+    flex-direction: row;
+}
+.tel-contact-container{
+
+}
+.icon-phone-container{
+    display: flex;
+    flex-direction: row;
+}
+.icon-phone-container img{
+    width: 120px;
+    text-align: center;
+}
+
+
+
+
+/* END DOCTOR INQUIRY*/
+
 /* START FOOTER STYLE*/
 .footer-wrap{
     /*position: absolute;*/
