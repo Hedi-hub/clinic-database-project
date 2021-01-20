@@ -1,3 +1,5 @@
+/* START HEADER */
+
 body{
     padding: 0;
     margin: 0;
@@ -49,42 +51,10 @@ nav a:hover{
     color: #000;
 }
 
-/*ABOUT US PAGE*/
-.main{
-    display: flex;
-    flex-direction: row;
-}
-.info-wrap{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-}
-.about-column{
-    /*width: 33%;*/
-    /*text-align: center;*/
-    background-color: #FFFFFF;
-    box-shadow: 0 1px 4px rgba(0,0, 0, 0.2);
-    padding:50px 80px;
-    display: inline-block;
-    margin:20px 20px ;
-    text-align: center;
-}
-.about-headLine{
-    font-family: 'Open Sans', sans-serif;
-    font-size: 20px;
-    font-weight: bold;
-    color: #3d3e3e;
-}
+/* END HEADER */
 
-.about-column img{
-    width: 100px;
-}
-.about-text{
-    font-family: 'Open Sans', sans-serif;
-    font-size: larger;
-}
 
-/*PATIENT FORM*/
+/* START INDEX */
 
 @import url(https://fonts.googleapis.com/css?family=Roboto:400,300,600,400italic);
 * {
@@ -101,7 +71,7 @@ nav a:hover{
 }
 
 body {
-    font-family: "Roboto", Helvetica, Arial, sans-serif;
+    font-family: 'Open Sans', sans-serif;
     font-weight: 100;
     font-size: 12px;
     line-height: 30px;
@@ -192,6 +162,62 @@ OF THE DEFAULT DESIGN IN ORDER TO GIVE IT A NEW DESIGN*/
 .doc-clinic{
     font-size: larger;
 }
+
+/* END INDEX */
+
+
+/*ABOUT US PAGE*/
+.main{
+    display: flex;
+    flex-direction: row;
+}
+.info-wrap{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.about-column{
+    /*width: 33%;*/
+    /*text-align: center;*/
+    background-color: #FFFFFF;
+    box-shadow: 0 1px 4px rgba(0,0, 0, 0.2);
+    padding:50px 80px;
+    display: inline-block;
+    margin:20px 20px ;
+    text-align: center;
+}
+.about-headLine{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    color: #3d3e3e;
+}
+
+.about-column img{
+    width: 100px;
+}
+.about-text{
+    font-family: 'Open Sans', sans-serif;
+    font-size: larger;
+}
+
+
+/* START CONTACT US*/
+
+.contact-main{
+    display: flex;
+    flex-direction: row;
+}
+.contact-wrap{
+    /* max-width: 400px; */
+    width: 90%;
+    margin: 0 auto;
+    position: relative;
+    background-color: #FFFFFF;
+}
+
+/* END CONTACT US */
+
 
 /*SUBMIT FORM*/
 #contact input[type="text"],
@@ -310,8 +336,12 @@ fieldset {
     color: #888;
 }
 
+/* END FORM*/
+
 /* START FOOTER STYLE*/
 .footer-wrap{
+    /*position: absolute;*/
+    bottom: 0;
     width:100%;
     height: 300px;
     background-color:#215261 ;
@@ -325,15 +355,7 @@ fieldset {
 /*    height: 280px;*/
 
 /*}*/
-.social-media-icon-wrap{
-    width: 100%;
-    text-align: center;
-    justify-content: center;
-    display: flex;
-    flex-direction: row;
 
-
-}
 .footer-navigation-wrap{
     width: 100%;
     display: flex;
@@ -341,20 +363,39 @@ fieldset {
     text-align: center;
     justify-content: center;
     color: #FFFFFF;
+    margin-top: 20px;
 }
 .footer-navigation-wrap a{
-   text-decoration: none;
+    font-weight: bolder;
+    text-decoration: none;
 }
+/* with :visited you can change the default design of a */
 .footer-navigation-wrap a:visited{
-   color: #FFFFFF;
+    color: #FFFFFF;
 }
+.social-media-icon-wrap{
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+}
+#facebook-icon{
+    font-size: 30px;
+}
+#instagram-icon{
+    font-size: 30px;
+    margin-left: 40px;
+}
+#twitter-icon{
+    font-size: 30px;
+    margin-left: 40px;
 
-
-
+}
 
 
 /* END FOOTER STYLE*/
-
 
 
 
