@@ -14,7 +14,7 @@ public class DoctorInquiryController {
                                     Model model){
 
         model.addAttribute("doctorName", name);
-        return "doctor-inquiry.html";
+        return "doctor-inquiry";
     }
 
 }

@@ -25,13 +25,12 @@
         <h2 id="tag1">MEDICARE PLANNER</h2>
         <h4 id="tag2">FIND THE RIGHT DOCTOR FOR YOUR NEED</h4>
     </div>
-    <div  class="doctor-wrap-row">
-        <form th:action="@{/showDoctorInquiry}">
-            <div th:each="doctor: ${allDoctors}" class="doctor-info">
-
+    <div class="doctor-wrap-row">
+        <div th:each="doctor: ${allDoctors}" class="doctor-info">
+            <form th:action="@{/showDoctorInquiry}">
                 <!-- THE THYMLEAF FOR FORLOOP COME WITH $SIGN AND THE EXACT
                  NAME OF OBJECT AND VARIABLE-->
-            <img th:src="${doctor.imageURL}" class="doc-img">
+                <img th:src="${doctor.imageURL}" class="doc-img">
                 <br>
                 <span th:text="${doctor.name}" class="doc-name"></span>
                 <br>
@@ -43,9 +42,8 @@
                 <!--IT HIDES THE NAME FROM THE VIEW BUT IT WILL TRANSFER TO CONTROLLER -->
                 <input type="hidden" name="doctor-name" th:value="${doctor.name}">
                 <input class="search-doc" type="submit" value="Contact">
-
-            </div>
-        </form>
+            </form>
+        </div>
     </div>
 
 </div>

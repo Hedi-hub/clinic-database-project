@@ -30,6 +30,7 @@ public class PatientFormController {
         }
 
         @RequestMapping("/acceptPatientForm")
+        //THIS MODEL IS NOT ENTITY BUT A CONTAINER TO SEND INFO TO HTML
         public String acceptPatientRequest(@RequestParam("first-name") String firstName,
                                        @RequestParam("last-name") String lastName,
                                        @RequestParam("email") String email,

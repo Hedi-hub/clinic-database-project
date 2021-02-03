@@ -27,10 +27,13 @@
 
         </div>
         <div class="form-container">
-            <form action="">
-                <label>PLEASE ENTER YOUR PHONE NUMBER! SO WE CONTACT YOU AS SOON AS POSSIBLE: </label>
+            <form th:action="@{/submitPatientInquiry}">
+                <label>PLEASE ENTER YOUR PHONE NUMBER: <br> </label>
+                <label th:text="${'Doctor '+ doctorName + ' will contact you as soon as possible!'}"></label>
+                <input type="hidden" name="doctor-name" th:value="${doctorName}">
+                <input type="number" name="user-number" placeholder="Phone number" class="input-phone">
+                <input type="submit" value="submit" class="search-doc">
             </form>
-
         </div>
     </div>
 

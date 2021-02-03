@@ -27,7 +27,7 @@ public class PatientService {
     public Patient getPatientById(Integer id){
         return patientRepository.findById(id).get();
     }
-
+// EITHER LIST OR LIST<PATIENT>
     public List<Patient>  getAllPatients(){
         return (List) patientRepository.findAll();
     }
