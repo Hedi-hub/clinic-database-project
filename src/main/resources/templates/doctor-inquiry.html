@@ -20,7 +20,8 @@
         <a th:href="@{/contact}">CONTACT US</a>
     </nav>
 </header>
-<div class="doc-inquiry-main">
+<div class="doc-inquiry-main" th:classappend="${condition} ?
+        'doc-inquiry-main' : 'dont-show'">
     <div class="tel-contact-container">
         <div class="icon-phone-container">
             <img th:src="@{images/smartphone.png}">
@@ -36,9 +37,12 @@
             </form>
         </div>
     </div>
+</div>
+<div class="message-main-container">
+
+<div th:if="${message}" th:text="${message}" class="message"/>
 
 </div>
-
 <footer th:replace="fragments/footer :: footer">
 
 </footer>

@@ -536,6 +536,33 @@ textarea {
     line-height: 2rem;
 }
 
+/* SUCCESS MESSAGE  */
+.dont-show {
+    display: none;
+}
+
+.message-main-container{
+    width: 90%;
+    margin: 0 auto;
+    position: relative;
+    background-color: #FFFFFF;
+    display: flex;
+    flex-direction: row;
+
+}
+.message{
+    display: flex !important;
+    flex-direction: row;
+    padding: 10px 80px;
+    margin: 20% auto;
+    font-size: 20px;
+    font-weight: bolder;
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+    background-color:#c4f5ef;
+    color: #3d3e3e;
+}
+
 
 
 

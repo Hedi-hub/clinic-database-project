@@ -14,6 +14,7 @@ public class DoctorInquiryController {
                                     Model model){
 
         model.addAttribute("doctorName", name);
+        model.addAttribute("condition", true);
         return "doctor-inquiry";
     }
 
